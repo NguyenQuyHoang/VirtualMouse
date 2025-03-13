@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập & Đăng ký</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form đăng nhập -->
+        <div id="loginForm" class="form active">
+            <h2>Đăng nhập</h2>
+            <input type="text" id="loginUsername" placeholder="Tên đăng nhập" required><br><br>
+            <input type="password" id="loginPassword" placeholder="Mật khẩu" required><br><br>
+            <button onclick="login()">Đăng nhập</button>
+            <p>Chưa có tài khoản? <span class="toggle-btn" onclick="toggleForm()">Đăng ký</span></p>
+        </div>
+        
+        <!-- Form đăng ký -->
+        <div id="registerForm" class="form">
+            <h2>Đăng ký</h2>
+            <input type="text" id="registerUsername" placeholder="Tên đăng nhập" required><br><br>
+            <input type="email" id="registerEmail" placeholder="Email" required><br><br>
+            <input type="password" id="registerPassword" placeholder="Mật khẩu" required><br><br>
+            <button onclick="register()">Đăng ký</button>
+            <p>Đã có tài khoản? <span class="toggle-btn" onclick="toggleForm()">Đăng nhập</span></p>
+        </div>
+    </div>
+    
+    <script>
+        // Chuyển đổi giữa form đăng nhập và đăng ký
+        function toggleForm() {
+            document.getElementById('loginForm').classList.toggle('active');
+            document.getElementById('registerForm').classList.toggle('active');
+        }
+        
+        // Xử lý đăng ký
+        function register() {
+            let username = document.getElementById('registerUsername').value;
+            let email = document.getElementById('registerEmail').value;
+            let password = document.getElementById('registerPassword').value;
+            
+            // Kiểm tra nếu người dùng đã nhập đầy đủ thông tin
+            if (username && email && password) {
+                alert('Đăng ký thành công! Vui lòng đăng nhập.');
+                toggleForm(); // Chuyển sang form đăng nhập
+            } else {
+                alert('Vui lòng điền đầy đủ thông tin!');
+            }
+        }
+        
+        // Xử lý đăng nhập
+        function login() {
+            let username = document.getElementById('loginUsername').value;
+            let password = document.getElementById('loginPassword').value;
+            
+            // Kiểm tra nếu người dùng đã nhập tên đăng nhập và mật khẩu
+            if (username && password) {
+                window.location.href = 'Home.html  '; // Chuyển hướng sau khi đăng nhập
+            } else {
+                alert('Vui lòng nhập tên đăng nhập và mật khẩu!');
+            }
+        }
+    </script>
+</body>
+</html>

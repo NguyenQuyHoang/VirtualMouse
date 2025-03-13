@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuột Ảo Máy Tính</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    
+    
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Chuột Ảo Máy Tính</h1>
+        <p class="status">Trạng thái: Đang chờ kết nối...</p>
+        <div class="buttons">
+            <button class="start-button" onclick="startVirtualMouse()">Bật</button>
+            <button class="stop-button" onclick="stopVirtualMouse()">Tắt</button>
+        </div>
+        <div class="webcam"></div>
+        
+    </div>
+
+   <script>
+    /* Hàm bật chuột ảo và mở webcam */
+    function startVirtualMouse() {
+        document.querySelector('.status').innerText = 'Trạng thái: Chuột ảo đang hoạt động!';
+        document.querySelector('.webcam').innerHTML = `<img id="video-feed" src="{{ url_for('video_feed') }}" alt="Video Stream">`;
+        alert('Chuột ảo đã được kích hoạt!');
+    }
+
+    /* Hàm tắt chuột ảo và đóng webcam */
+    function stopVirtualMouse() {
+        document.querySelector('.status').innerText = 'Trạng thái: Chuột ảo đã tắt!';
+        document.querySelector('.webcam').innerHTML = ''; // Xóa video khi tắt
+        alert('Chuột ảo đã được tắt!');
+    }
+</script>
+</body>
+</html>

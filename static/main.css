@@ -1,0 +1,118 @@
+/* Định dạng giao diện */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+.form {
+    display: none;
+}
+.form.active {
+    display: block;
+}
+.toggle-btn {
+    color: blue;
+    cursor: pointer;
+}
+    
+
+
+/* Định dạng hộp giao diện */
+.container {
+    background: rgba(255, 255, 255, 0.15); /* Hiệu ứng kính mờ */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px); /* Làm mờ nền phía sau */
+    width: 600px; /* Điều chỉnh chiều rộng */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Định dạng tiêu đề */
+h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Định dạng trạng thái hoạt động của chuột ảo */
+.status {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Định dạng nút bấm */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Định dạng nút bật chuột ảo */
+.start-button {
+    background: #2ecc71; /* Màu xanh lá cây */
+    color: white;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.5);
+}
+.start-button:hover {
+    background: #27ae60;
+}
+
+/* Định dạng nút tắt chuột ảo */
+.stop-button {
+    background: #e74c3c; /* Màu đỏ */
+    color: white;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.5);
+}
+.stop-button:hover {
+    background: #c0392b;
+}
+
+/* Định dạng video webcam */
+#webcam {
+    display: none;
+    width: 100%; /* Đảm bảo video có cùng kích thước với khung */
+    max-width: 540px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: black; /* Nền đen nếu chưa có video */
+}
+
+/* Căn giữa toàn bộ nội dung trên màn hình */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ecf0f1;
+    margin: 0;
+}
+
