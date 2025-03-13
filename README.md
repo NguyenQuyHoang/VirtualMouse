@@ -11,7 +11,7 @@
 ### 1️⃣ Clone the Repository  
 1. git clone <URL_GIT>
 
-2. cd VirtualMouse
+2. at vs code, open new windown, opent folder VirtualMouse !important
 
 3. python -m venv myenv
 
